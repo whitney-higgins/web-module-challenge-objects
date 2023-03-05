@@ -40,9 +40,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-// console.log(createMenuItem('Fettuccine Alfredo', 20, 'Dinner'))
-// console.log(createMenuItem('Egg Foo Young', 8, 'Lunch'))
-// console.log(createMenuItem('Bo Bo Plater', 18, 'Appetizer'))
+console.log(createMenuItem("Fettuccine Alfredo", 20, "Dinner"));
+console.log(createMenuItem("Egg Foo Young", 8, "Lunch"));
+console.log(createMenuItem("Bo Bo Plater", 18, "Appetizer"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the string received as a parameter. 
@@ -61,7 +61,7 @@ const burger = {
   price: 18,
   category: "Lunch",
   discount: function (customer) {
-    if (customer === "teacher" || customer === "students") {
+    if (customer === "teacher" || customer === "student") {
       const discountAmnt = this.price * 0.25;
 
       return this.price - discountAmnt;
@@ -189,9 +189,15 @@ Use the getLastReview function below to do the following:
   NOTE: her feedback should not be blank if task 4 was done correctly
 */
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length - 1]["name"]} gave the restaurant a ${
+    array[array.length - 1]["rating"]
+  } star review, and their feedback was: ${
+    array[array.length - 1]["feedback"]
+  }`;
 }
+
+getLastReview(reviews);
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
 
